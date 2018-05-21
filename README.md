@@ -70,9 +70,12 @@ the name of the new files when running the examples. All data files need to be s
 The implementations of both the simple non-scalabe bloom filter and the scalable bloom filter follow the paper: http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf
 Note that for the non-scalabe version, the bit array is diveded into k slices and each hash function output an index to one slice. This is a variant to the 
 traditional non-scalabe bloom filter but the equations used to derive the number of bits m in the filter and the number of hash functions k given the maximum 
-false positive rate p and number of elements to be inserted n are the same: 
+false positive rate p and number of elements to be inserted n are the same:
+
 	m = (n|ln(p)|)/(ln(2)**2)
+	
 	k = -log2(p)
+	
 The scalable version follows the implementation stated in the paper with the default s set to 2 and r set to 0.9. Since it can scale automatically, the initial 
 capacity of the scalable bloom filter can be set much smaller than the non-scalabe version given the same number of data.
 
