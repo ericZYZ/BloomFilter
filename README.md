@@ -1,7 +1,7 @@
 # BloomFilter
 An implementation of both non-scalable and scalable bloom filter.
-########################################################################
 
+## Prerequisites
 Please make sure you have bitarray and mmh3 installed prior to running the examples.
 
 To install bitarray:
@@ -11,7 +11,7 @@ To install mmh3:
 
 	pip install mmh3
 
-######################################################################## 
+## Components
 
 This folder contains 4 python files. 
 	
@@ -29,7 +29,7 @@ This folder contains 2 text files.
 You can change the content of these two text files to test on different data. Or you can use two different files directly and remember to specify 
 the name of the new files when running the examples. All data files need to be stored in the same folder as the python files.
 	
-########################################################################
+## Run examples
 
 **To run the non-scalabe bloom filter example using bloomfilter_test.py:
 
@@ -65,7 +65,7 @@ the name of the new files when running the examples. All data files need to be s
 	Example:
 		python scalable_bloomfilter_test.py --initial-capacity 100 --error 0.01 --present-file-name presentfile.txt --absent-file-name absentfile.txt
 	
-########################################################################
+## Analysis
 
 The implementations of both the simple non-scalabe bloom filter and the scalable bloom filter follow the paper: http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf
 Note that for the non-scalabe version, the bit array is diveded into k slices and each hash function output an index to one slice. This is a variant to the 
