@@ -3,20 +3,25 @@ An implementation of both non-scalable and scalable bloom filter.
 ########################################################################
 
 Please make sure you have bitarray and mmh3 installed prior to running the examples.
+
 To install bitarray:
+
 	pip install bitarray
 To install mmh3:
+
 	pip install mmh3
 
 ######################################################################## 
 
 This folder contains 4 python files. 
+	
 	bloomfilter.py:			Implementation of the bloom filter(non-scalable).
 	scalable_bloomfilter:	Implementation of the scalable bloom filter following: http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf
 	bloomfilter_test.py:	An example of running the non-scalabe bloom filter on two set of data.
 	scalable_bloomfilter_test.py:	An example of running the scalabe bloom filter on two set of data.
  
 This folder contains 2 text files. 
+
 	presentfile.txt:	Contains the data to be added to the bloom filter. Integers from 0 to 999.
 	absentfile.txt:		Contains the data which are not added to the bloom filter at the beginning, and is used to test the false positive rate.
 						Integers from 1000 to 2999.
